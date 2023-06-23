@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result Page (Version 3)</title>
+</head>
+<body>
+  <h1>Submitted Data:</h1>
+  <p>
+    First Name: <span id="first-name"></span><br>
+    Last Name: <span id="last-name"></span><br>
+    Address: <span id="address"></span><br>
+    Phone Number: <span id="phone-number"></span><br>
+    Military Branch: <span id="military-branch"></span>
+  </p>
+
+  <script>
+    // Get the submitted data from the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Populate the result page with the submitted data
+    document.getElementById("first-name").textContent = urlParams.get("first-name");
+    document.getElementById("last-name").textContent = urlParams.get("last-name");
+    document.getElementById("address").textContent = urlParams.get("address");
+    document.getElementById("phone-number").textContent = urlParams.get("phone-number");
+    document.getElementById("military-branch").textContent = urlParams.get("military-branch");
+  </script>
+</body>
+</html>

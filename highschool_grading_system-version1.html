@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>High School Grading Application</title>
+  <script>
+    function calculateGrade(averageScore) {
+      // User code: Insert your own grading logic here
+      
+    }
+
+    function calculateAverageScore(scores) {
+      // User code: Insert your own logic to calculate the average score here
+      
+    }
+
+    function calculate() {
+      const scoreInput = document.getElementById('score-input');
+      const scores = scoreInput.value.split(',').map(Number);
+      
+      const averageScore = calculateAverageScore(scores);
+      const grade = calculateGrade(averageScore);
+
+      const result = document.getElementById('result');
+      result.textContent = `Average Score: ${averageScore.toFixed(2)} | Grade: ${grade}`;
+    }
+  </script>
+</head>
+<body>
+  <h1>High School Grading Application</h1>
+  <label for="score-input">Enter scores separated by commas:</label>
+  <input type="text" id="score-input" />
+  <button onclick="calculate()">Calculate</button>
+  <p id="result"></p>
+</body>
+</html>

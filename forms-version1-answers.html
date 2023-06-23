@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Page</title>
+</head>
+<body>
+  <form id="myForm" action="#">
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" name="first-name" required><br>
+
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" name="last-name" required><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br>
+
+    <label for="phone-number">Phone Number:</label>
+    <input type="tel" id="phone-number" name="phone-number" required><br>
+
+    <label for="military-branch">Military Branch:</label>
+    <select id="military-branch" name="military-branch" required>
+      <option value="Army">Army</option>
+      <option value="Navy">Navy</option>
+      <option value="Air Force">Air Force</option>
+      <option value="Marines">Marines</option>
+      <option value="Coast Guard">Coast Guard</option>
+    </select><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    // Get the form element
+    const form = document.getElementById('myForm');
+
+    // Add a submit event listener to the form
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get the form values
+      const firstName = document.getElementById('first-name').value;
+      const lastName = document.getElementById('last-name').value;
+      const address = document.getElementById('address').value;
+      const phoneNumber = document.getElementById('phone-number').value;
+      const militaryBranch = document.getElementById('military-branch').value;
+
+      // Construct the URL with the form data
+      const url = `forms_2-version1-aswers.html?first-name=${encodeURIComponent(firstName)}&last-name=${encodeURIComponent(lastName)}&address=${encodeURIComponent(address)}&phone-number=${encodeURIComponent(phoneNumber)}&military-branch=${encodeURIComponent(militaryBranch)}`;
+
+      // Redirect to the result page
+      window.location.href = url;
+    });
+  </script>
+</body>
+</html>

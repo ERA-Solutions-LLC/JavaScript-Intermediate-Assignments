@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    .calculator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .calculator input,
+    .calculator select,
+    .calculator button {
+      margin: 5px;
+    }
+
+    .calculator div {
+      margin-top: 10px;
+    }
+
+    .calculator h3 {
+      margin: 0;
+    }
+
+    .calculator #result {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="num1" placeholder="Enter number 1" />
+    <select id="operator">
+      <option value="add">+</option>
+      <option value="subtract">-</option>
+      <option value="multiply">*</option>
+      <option value="divide">/</option>
+    </select>
+    <input type="text" id="num2" placeholder="Enter number 2" />
+    <button onclick="calculate()">Calculate</button>
+    <div>
+      <h3>Result: <span id="result"></span></h3>
+    </div>
+    <button onclick="clearInput()">Clear</button>
+    <button onclick="squareRoot()">Square Root</button>
+    <button onclick="power()">Power</button>
+    <button onclick="percentage()">Percentage</button>
+    <button onclick="floor()">Floor</button>
+  </div>
+
+  <script>
+    function calculate() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var operator = document.getElementById('operator').value;
+      var result;
+
+      // Perform calculations based on the selected operator
+      if (operator === 'add') {
+        result = num1 + num2;
+      } else if (operator === 'subtract') {
+        result = num1 - num2;
+      } else if (operator === 'multiply') {
+        result = num1 * num2;
+      } else if (operator === 'divide') {
+        result = num1 / num2;
+      }
+
+      // Display the result
+      document.getElementById('result').textContent = result;
+    }
+
+    // Additional functionality
+
+    function clearInput() {
+      // TODO: Fill in the code to clear the input fields and reset the result
+    }
+
+    function squareRoot() {
+      // TODO: Fill in the code to calculate the square root of num1 and display the result
+    }
+
+    function power() {
+      // TODO: Fill in the code to calculate the power of num1 raised to num2 and display the result
+    }
+
+    function percentage() {
+      // TODO: Fill in the code to calculate the percentage of num1 with respect to num2 and display the result
+    }
+
+    function floor() {
+      // TODO: Fill in the code to calculate the floor value of num1 and display the result
+    }
+  </script>
+</body>
+</html>
