@@ -1,0 +1,45 @@
+<!--
+In this version, the students need to fill in the blank spaces (_____) with the appropriate code to make the program functional. The specific instructions and code to be inserted are as follows:
+
+Calculate the travel time for flying:
+Replace var hoursFly = _____; // TODO: Insert code to calculate travel time for flying with the code to calculate the travel time for flying. Remember that the plane flies at a speed of 500 mph.
+
+Calculate the travel time for driving:
+Replace var hoursDrive = _____; // TODO: Insert code to calculate travel time for driving with the code to calculate the travel time for driving. Remember that the car drives at a speed of 60 mph.
+
+Display the entered miles and calculated travel times:
+Replace result.innerHTML = _____; // TODO: Insert code to display the entered miles and calculated travel times with the code to display the entered miles and calculated travel times. You can use string concatenation to format the output.
+
+Once the students have inserted the appropriate code in the respective locations, the program should work as intended. They can save the HTML file, open it in a web browser, enter the miles to travel, and click the "Calculate" button to see the calculated travel times displayed below.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Miles Travel Time Calculator</title>
+</head>
+<body>
+  <h1>Miles Travel Time Calculator</h1>
+  <div>
+    <label for="miles-input">Enter miles to travel:</label>
+    <input type="number" id="miles-input" />
+    <button id="calculate-button">Calculate</button>
+  </div>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("calculate-button").addEventListener("click", function () {
+      // Get the entered miles
+      var milesTravel = parseFloat(document.getElementById("miles-input").value);
+      // Calculate the travel time for flying (plane flies 500 mph)
+      var hoursFly = _____; // TODO: Insert code to calculate travel time for flying
+
+      // Calculate the travel time for driving (car drives 60 mph)
+      var hoursDrive = _____; // TODO: Insert code to calculate travel time for driving
+
+      // Display the calculated travel times
+      var result = document.getElementById("result");
+      result.innerHTML = _____; // TODO: Insert code to display the entered miles and calculated travel times
+    });
+  </script>
+</body>
+</html>

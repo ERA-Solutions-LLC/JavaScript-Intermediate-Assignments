@@ -1,0 +1,77 @@
+<!--
+Look for the TODO comments within the code. These are areas where you need to fill in the necessary code to complete the functionality of the program.
+
+Implement the code for the Reset button. This button should clear the entered miles, the main result, and the additional results.
+
+Implement the code for the Convert to Minutes button. This button should convert the travel time (in hours) to minutes.
+
+Implement the code for the Convert to Seconds button. This button should convert the travel time (in hours) to seconds.
+
+Implement the code for the Convert to Days button. This button should convert the travel time (in hours) to days.
+
+Implement the code for the Convert to Weeks button. This button should convert the travel time (in hours) to weeks.
+
+Save the HTML file with a meaningful name, such as travel-time-calculator.html.
+
+Open the HTML file in a web browser to see the Miles Travel Time Calculator. Enter a value in the input field, click the "Calculate" button, and the calculated travel times will be displayed below. Use the additional functionality buttons to perform extra
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Miles Travel Time Calculator</title>
+</head>
+<body>
+  <h1>Miles Travel Time Calculator</h1>
+  <div>
+    <label for="miles-input">Enter miles to travel:</label>
+    <input type="number" id="miles-input" />
+    <button id="calculate-button">Calculate</button>
+  </div>
+  <div id="result"></div>
+
+  <h2>Additional Functionalities:</h2>
+  <div>
+    <button id="reset-button">Reset</button>
+    <button id="convert-minutes-button">Convert to Minutes</button>
+    <button id="convert-seconds-button">Convert to Seconds</button>
+    <button id="convert-days-button">Convert to Days</button>
+    <button id="convert-weeks-button">Convert to Weeks</button>
+  </div>
+  <div id="additional-results"></div>
+
+  <script>
+    document.getElementById("calculate-button").addEventListener("click", function () {
+      var milesTravel = parseFloat(document.getElementById("miles-input").value);
+      var hoursFly = milesTravel / 500.0;
+      var hoursDrive = milesTravel / 60.0;
+
+      var result = document.getElementById("result");
+      result.innerHTML = milesTravel + " miles would take:<br>";
+      result.innerHTML += "   " + hoursFly + " hours to fly<br>";
+      result.innerHTML += "   " + hoursDrive + " hours to drive<br>";
+    });
+
+    document.getElementById("reset-button").addEventListener("click", function () {
+      // TODO: Insert code to clear the entered miles, result, and additional results
+    });
+
+    document.getElementById("convert-minutes-button").addEventListener("click", function () {
+      // TODO: Insert code to convert the travel time to minutes
+    });
+
+    document.getElementById("convert-seconds-button").addEventListener("click", function () {
+      // TODO: Insert code to convert the travel time to seconds
+    });
+
+    document.getElementById("convert-days-button").addEventListener("click", function () {
+      // TODO: Insert code to convert the travel time to days
+    });
+
+    document.getElementById("convert-weeks-button").addEventListener("click", function () {
+      // TODO: Insert code to convert the travel time to weeks
+    });
+  </script>
+</body>
+</html>

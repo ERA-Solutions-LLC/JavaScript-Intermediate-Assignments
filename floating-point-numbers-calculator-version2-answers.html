@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Miles Travel Time Calculator</title>
+</head>
+<body>
+  <h1>Miles Travel Time Calculator</h1>
+  <div>
+    <label for="miles-input">Enter miles to travel:</label>
+    <input type="number" id="miles-input" />
+    <button id="calculate-button">Calculate</button>
+  </div>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("calculate-button").addEventListener("click", function () {
+      // Get the entered miles
+      var milesTravel = parseFloat(document.getElementById("miles-input").value);
+      // Calculate the travel time for flying (plane flies 500 mph)
+      var hoursFly = milesTravel / 500.0;
+      // Calculate the travel time for driving (car drives 60 mph)
+      var hoursDrive = milesTravel / 60.0;
+
+      // Display the calculated travel times
+      var result = document.getElementById("result");
+      result.innerHTML = milesTravel + " miles would take:<br>";
+      result.innerHTML += "   " + hoursFly + " hours to fly<br>";
+      result.innerHTML += "   " + hoursDrive + " hours to drive<br>";
+    });
+  </script>
+</body>
+</html>

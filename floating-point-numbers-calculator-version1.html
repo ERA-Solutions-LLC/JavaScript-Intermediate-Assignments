@@ -1,0 +1,51 @@
+
+<!--Look for the line that says var milesTravel = parseFloat(document.getElementById("miles-input").value); and replace the _____ with a variable name that represents the entered miles. This variable will store the value entered by the user.
+
+Locate the line var hoursFly = _____ / 500.0; and replace the _____ with a variable name that represents the calculation for travel time when flying. This variable should be assigned the result of dividing the entered miles by 500.0.
+
+Find the line var hoursDrive = _____ / 60.0; and replace the _____ with a variable name that represents the calculation for travel time when driving. This variable should be assigned the result of dividing the entered miles by 60.0.
+
+Move to the line result.innerHTML = _____ + " miles would take:<br>"; and replace the _____ with a variable name that represents the entered miles. This will display the entered miles in the result section.
+
+Look for the line result.innerHTML += " " + _____ + " hours to fly<br>"; and replace the _____ with a variable name that represents the travel time when flying. This will display the calculated travel time when flying in the result section.
+
+Finally, find the line result.innerHTML += " " + _____ + " hours to drive<br>"; and replace the _____ with a variable name that represents the travel time when driving. This will display the calculated travel time when driving in the result section.
+
+Save the HTML file with a meaningful name, such as travel-time-calculator.html.
+
+Open the HTML file in a web browser to see the Miles Travel Time Calculator. Enter a value in the input field, click the "Calculate" button, and the calculated travel times will be displayed below.
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Miles Travel Time Calculator</title>
+</head>
+<body>
+  <h1>Miles Travel Time Calculator</h1>
+  <div>
+    <label for="miles-input">Enter miles to travel:</label>
+    <input type="number" id="miles-input" />
+    <button id="calculate-button">Calculate</button>
+  </div>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("calculate-button").addEventListener("click", function () {
+      // Get the entered miles
+      var milesTravel = parseFloat(document.getElementById("miles-input").value);
+      // Calculate the travel time for flying (plane flies 500 mph)
+      var hoursFly = _____ / 500.0;
+      // Calculate the travel time for driving (car drives 60 mph)
+      var hoursDrive = _____ / 60.0;
+
+      // Display the calculated travel times
+      var result = document.getElementById("result");
+      result.innerHTML = _____ + " miles would take:<br>";
+      result.innerHTML += "   " + _____ + " hours to fly<br>";
+      result.innerHTML += "   " + _____ + " hours to drive<br>";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Miles Travel Time Calculator</title>
+</head>
+<body>
+  <h1>Miles Travel Time Calculator</h1>
+  <div>
+    <label for="miles-input">Enter miles to travel:</label>
+    <input type="number" id="miles-input" />
+    <button id="calculate-button">Calculate</button>
+  </div>
+  <div id="result"></div>
+
+  <h2>Additional Functionalities:</h2>
+  <div>
+    <button id="reset-button">Reset</button>
+    <button id="convert-minutes-button">Convert to Minutes</button>
+    <button id="convert-seconds-button">Convert to Seconds</button>
+    <button id="convert-days-button">Convert to Days</button>
+    <button id="convert-weeks-button">Convert to Weeks</button>
+  </div>
+  <div id="additional-results"></div>
+
+  <script>
+    document.getElementById("calculate-button").addEventListener("click", function () {
+      var milesTravel = parseFloat(document.getElementById("miles-input").value);
+      var hoursFly = milesTravel / 500.0;
+      var hoursDrive = milesTravel / 60.0;
+
+      var result = document.getElementById("result");
+      result.innerHTML = milesTravel + " miles would take:<br>";
+      result.innerHTML += "   " + hoursFly + " hours to fly<br>";
+      result.innerHTML += "   " + hoursDrive + " hours to drive<br>";
+    });
+
+    document.getElementById("reset-button").addEventListener("click", function () {
+      document.getElementById("miles-input").value = "";
+      document.getElementById("result").innerHTML = "";
+      document.getElementById("additional-results").innerHTML = "";
+    });
+
+    document.getElementById("convert-minutes-button").addEventListener("click", function () {
+      var hours = parseFloat(document.getElementById("miles-input").value) / 500.0;
+      var minutes = hours * 60;
+      document.getElementById("additional-results").innerHTML = "Travel time in minutes: " + minutes;
+    });
+
+    document.getElementById("convert-seconds-button").addEventListener("click", function () {
+      var hours = parseFloat(document.getElementById("miles-input").value) / 500.0;
+      var seconds = hours * 60 * 60;
+      document.getElementById("additional-results").innerHTML = "Travel time in seconds: " + seconds;
+    });
+
+    document.getElementById("convert-days-button").addEventListener("click", function () {
+      var hours = parseFloat(document.getElementById("miles-input").value) / 500.0;
+      var days = hours / 24;
+      document.getElementById("additional-results").innerHTML = "Travel time in days: " + days;
+    });
+
+    document.getElementById("convert-weeks-button").addEventListener("click", function () {
+      var hours = parseFloat(document.getElementById("miles-input").value) / 500.0;
+      var weeks = hours / 24 / 7;
+      document.getElementById("additional-results").innerHTML = "Travel time in weeks: " + weeks;
+    });
+  </script>
+</body>
+</html>
