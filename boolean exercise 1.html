@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voter Eligibility Check</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Voter Eligibility Check</h1>
+  <p>Enter your age below and click the "Check" button to see if you are eligible to vote:</p>
+  <form>
+    <label for="ageInput">Age:</label>
+    <input type="number" id="ageInput" required>
+    <button type="button" onclick="checkVoterEligibility()">Check</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    function isEligibleToVote(age) {
+      // Fill in the code here to check if the person is eligible to vote using boolean logic.
+      // The voting age varies by country, so set a voting age threshold (e.g., 18).
+      // Return true if the person's age is greater than or equal to the voting age, and false otherwise.
+
+      // Your code goes here:
+
+    }
+
+    function checkVoterEligibility() {
+      const ageInput = document.getElementById('ageInput').value;
+      const age = parseInt(ageInput);
+
+      if (isNaN(age) || age < 0) {
+        alert("Please enter a valid age.");
+      } else {
+        const resultDiv = document.getElementById('result');
+        const isEligible = isEligibleToVote(age);
+
+        if (isEligible) {
+          resultDiv.textContent = `You are eligible to vote!`;
+        } else {
+          resultDiv.textContent = `You are not yet eligible to vote.`;
+        }
+      }
+    }
+  </script>
+</body>
+</html>
+
+<!--
+  Your task is to fill in the code inside the isEligibleToVote() function to check if the person's age is greater than or equal to the voting age using boolean logic. For example, you can set the voting age threshold to 18 for this exercise. If the person's age is greater than or equal to 18, the function should return true, indicating that the person is eligible to vote. Otherwise, it should return false.
+
+Once you've filled in the code, you can open the HTML file in a web browser and test the program by entering different ages to see if the person is eligible to vote or not.
+-->
