@@ -1,0 +1,59 @@
+<!--
+    In this completed code:
+
+We declared a variable radius using the let keyword and initialized it with a value of 5.
+
+We declared two more variables area and circumference using the let keyword and initialized them as undefined.
+
+We calculated the area of the circle using the radius variable and stored the result in the area variable.
+
+We calculated the circumference of the circle using the radius variable and stored the result in the circumference variable.
+
+We displayed the results of the area and circumference using console.log(), which will show the output based on the given radius = 5:
+
+Area: 78.53981633974483
+Circumference: 31.41592653589793
+
+These are the calculated area and circumference of the circle with the given radius = 5.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Area and Circumference</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Circle Area and Circumference</h1>
+  <p>Calculate the area and circumference of a circle:</p>
+  
+  <script>
+    // Step 1: Declare a variable using 'let' and name it 'radius'.
+    // Initialize 'radius' with a value of 5.
+    let radius = 5;
+
+    // Step 2: Declare two more variables using 'let' and name them 'area' and 'circumference'.
+    // Initialize 'area' and 'circumference' as undefined for now.
+    let area, circumference;
+
+    // Step 3: Calculate the area of the circle using the 'radius' variable.
+    // Store the result in the 'area' variable.
+    area = Math.PI * radius * radius;
+
+    // Step 4: Calculate the circumference of the circle using the 'radius' variable.
+    // Store the result in the 'circumference' variable.
+    circumference = 2 * Math.PI * radius;
+
+    // Step 5: Display the results using 'console.log()'.
+    console.log('Area:', area);
+    console.log('Circumference:', circumference);
+  </script>
+</body>
+</html>

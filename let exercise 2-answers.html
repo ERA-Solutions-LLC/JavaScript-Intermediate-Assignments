@@ -1,0 +1,54 @@
+<!--
+    In this completed code:
+
+We declared a variable userName using the let keyword and initialized it with the placeholder name "John". You can initialize this variable with your own name or any other name you like.
+
+We declared a variable message using the let keyword and initialized it as an empty string.
+
+We prompted the user to enter their name using the prompt() function and stored the result in the userName variable. The prompt message will be "Please enter your name:".
+
+We used string concatenation to create a personalized message and stored it in the message variable. The message greets the user by name.
+
+We displayed the personalized message using the alert() function, which will show a popup with the personalized greeting based on the user's input.
+
+When you open the HTML file in a web browser, it will prompt you to enter your name, and after entering your name, it will display a personalized greeting message using alert().
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalized Message with 'let'</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Personalized Message with 'let'</h1>
+  <p>Create a personalized message using user input and string concatenation:</p>
+  
+  <script>
+    // Step 1: Declare a variable using 'let' and name it 'userName'.
+    // Initialize 'userName' with your own name or any placeholder name of your choice.
+    let userName = "John"; // You can initialize this with your own name or leave it as "John".
+
+    // Step 2: Declare a variable using 'let' and name it 'message'.
+    // Initialize 'message' as an empty string for now.
+    let message = '';
+
+    // Step 3: Prompt the user to enter their name using the 'prompt()' function and store the result in 'userName'.
+    // The prompt message should be "Please enter your name:".
+    userName = prompt("Please enter your name:");
+
+    // Step 4: Use string concatenation to create a personalized message and store it in the 'message' variable.
+    // The message should greet the user by name. For example, "Hello, John!".
+    message = "Hello, " + userName + "!";
+
+    // Step 5: Display the personalized message using 'alert()'.
+    alert(message);
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!--
+In this completed code:
+
+We declared a variable birthYear using the let keyword and initialized it with 1990.
+
+We declared a variable currentYear using the let keyword and initialized it with the current year using the new Date().getFullYear() method.
+
+We calculated the age in years by subtracting birthYear from currentYear and stored the result in the ageInYears variable.
+
+We calculated the age in days by multiplying ageInYears by 365 (assuming no leap years) and stored the result in the ageInDays variable.
+
+We displayed the calculated age in days using console.log().
+
+When you open the HTML file in a web browser and inspect the console, it will display the calculated age in days based on your birthYear. Please note that the result might vary depending on the current year and the birth year you have provided.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age in Days Calculator with 'let'</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Age in Days Calculator with 'let'</h1>
+  <p>Calculate your age in days:</p>
+  
+  <script>
+    // Step 1: Declare a variable using 'let' and name it 'birthYear'.
+    // Initialize 'birthYear' with your birth year (e.g., 1990).
+    let birthYear = 1990;
+
+    // Step 2: Declare a variable using 'let' and name it 'currentYear'.
+    // Initialize 'currentYear' with the current year.
+    let currentYear = new Date().getFullYear();
+
+    // Step 3: Calculate the age in years by subtracting 'birthYear' from 'currentYear'.
+    // Store the result in a new variable named 'ageInYears'.
+    let ageInYears = currentYear - birthYear;
+
+    // Step 4: Calculate the age in days by multiplying 'ageInYears' by 365 (assuming no leap years).
+    // Store the result in a new variable named 'ageInDays'.
+    let ageInDays = ageInYears * 365;
+
+    // Step 5: Display the age in days using 'console.log()'.
+    console.log('Age in days:', ageInDays);
+  </script>
+</body>
+</html>
