@@ -1,0 +1,54 @@
+<!--
+   In this completed code:
+
+We declared two variables length and width using the var keyword and initialized length with 8 and width with 5.
+
+We calculated the area of the rectangle using the length and width variables and stored the result in the area variable.
+
+We calculated the perimeter of the rectangle using the length and width variables and stored the result in the perimeter variable.
+
+We displayed the results of the area and perimeter using console.log() to show the calculated values in the browser's console.
+
+When you open the HTML file in a web browser and inspect the console, it will display the calculated area and perimeter of the rectangle with length = 8 and width = 5 as follows:
+
+Area: 40
+Perimeter: 26
+
+These are the results of calculating the area and perimeter of the rectangle with the given length and width values.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rectangle Area and Perimeter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rectangle Area and Perimeter</h1>
+  <p>Calculate the area and perimeter of a rectangle:</p>
+  
+  <script>
+    // Step 1: Declare two variables using 'var' and name them 'length' and 'width'.
+    // Initialize 'length' with a value of 8 and 'width' with a value of 5.
+    var length = 8;
+    var width = 5;
+
+    // Step 2: Calculate the area of the rectangle using the 'length' and 'width' variables.
+    // Store the result in a new variable named 'area'.
+    var area = length * width;
+
+    // Step 3: Calculate the perimeter of the rectangle using the 'length' and 'width' variables.
+    // Store the result in a new variable named 'perimeter'.
+    var perimeter = 2 * (length + width);
+
+    // Step 4: Display the results using 'console.log()'.
+    console.log('Area:', area);
+    console.log('Perimeter:', perimeter);
+  </script>
+</body>
+</html>

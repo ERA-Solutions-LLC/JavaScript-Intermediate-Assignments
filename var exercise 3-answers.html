@@ -1,0 +1,53 @@
+<!--
+
+In this completed code:
+
+We declared three variables firstName, lastName, and message using the var keyword and initialized firstName with 'John', lastName with 'Doe', and message as an empty string.
+
+We combined firstName and lastName using string concatenation and stored the result in the message variable. The greeting "Hello, " is already included in Step 2.
+
+We added an exclamation mark at the end of the message by concatenating it to the existing message variable.
+
+We displayed the complete message using console.log(), which will show the output: "Hello, John Doe!"
+
+When you open the HTML file in a web browser and inspect the console, it will display the complete message: "Hello, John Doe!" based on the values provided for firstName and lastName.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Creation with 'var'</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Message Creation with 'var'</h1>
+  <p>Create a message using variables and string concatenation:</p>
+  
+  <script>
+    // Step 1: Declare three variables using 'var' and name them 'firstName', 'lastName', and 'message'.
+    // Initialize 'firstName' with your first name, 'lastName' with your last name, and 'message' as an empty string.
+    var firstName = 'John';
+    var lastName = 'Doe';
+    var message = '';
+
+    // Step 2: Combine 'firstName' and 'lastName' using string concatenation and store the result in 'message'.
+    message = 'Hello, ' + firstName + ' ' + lastName;
+
+    // Step 3: Add a greeting at the beginning of the message. For example, "Hello, ".
+    // (The greeting is already included in Step 2)
+
+    // Step 4: Add an exclamation mark at the end of the message.
+    message = message + '!';
+
+    // Step 5: Display the complete message using 'console.log()'.
+    console.log(message);
+  </script>
+</body>
+</html>
