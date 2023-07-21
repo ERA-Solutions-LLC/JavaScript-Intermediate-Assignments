@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Number Check</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Prime Number Check</h1>
+  <p>Enter a number below and click the "Check" button to see if it is a prime number:</p>
+  <form>
+    <label for="numberInput">Number:</label>
+    <input type="number" id="numberInput" required>
+    <button type="button" onclick="checkPrimeNumber()">Check</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    function isPrime(number) {
+      // Check if the number is a prime number using boolean logic.
+      // A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+      if (number < 2) {
+        return false;
+      }
+      for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function checkPrimeNumber() {
+      const numberInput = document.getElementById('numberInput').value;
+      const number = parseInt(numberInput);
+
+      if (isNaN(number) || number < 2) {
+        alert("Please enter a valid number greater than 1.");
+      } else {
+        const resultDiv = document.getElementById('result');
+        const isPrimeNumber = isPrime(number);
+
+        if (isPrimeNumber) {
+          resultDiv.textContent = `${number} is a prime number.`;
+        } else {
+          resultDiv.textContent = `${number} is not a prime number.`;
+        }
+      }
+    }
+  </script>
+</body>
+</html>

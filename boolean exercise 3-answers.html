@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Open/Closed Status</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Restaurant Open/Closed Status</h1>
+  <div id="status"></div>
+
+  <script>
+    function isRestaurantOpen(currentTime) {
+      // Check if the restaurant is open using boolean logic.
+      // For this exercise, let's assume the restaurant is open from 10 AM to 8 PM.
+      return currentTime >= 10 && currentTime < 20;
+    }
+
+    function updateStatus() {
+      const now = new Date();
+      const currentHour = now.getHours();
+
+      const statusDiv = document.getElementById('status');
+      const isOpen = isRestaurantOpen(currentHour);
+
+      if (isOpen) {
+        statusDiv.textContent = "Restaurant is currently OPEN.";
+      } else {
+        statusDiv.textContent = "Restaurant is currently CLOSED.";
+      }
+    }
+
+    // Call the updateStatus() function on page load
+    updateStatus();
+  </script>
+</body>
+</html>

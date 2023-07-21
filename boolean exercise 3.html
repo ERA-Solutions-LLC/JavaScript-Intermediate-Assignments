@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Open/Closed Status</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Restaurant Open/Closed Status</h1>
+  <div id="status"></div>
+
+  <script>
+    function isRestaurantOpen(currentTime) {
+      // Fill in the code here to check if the restaurant is open using boolean logic.
+      // For this exercise, let's assume the restaurant is open from 10 AM to 8 PM.
+      // Return true if the current time is within the opening hours, and false otherwise.
+
+      // Your code goes here:
+
+    }
+
+    function updateStatus() {
+      const now = new Date();
+      const currentHour = now.getHours();
+
+      const statusDiv = document.getElementById('status');
+      const isOpen = isRestaurantOpen(currentHour);
+
+      if (isOpen) {
+        statusDiv.textContent = "Restaurant is currently OPEN.";
+      } else {
+        statusDiv.textContent = "Restaurant is currently CLOSED.";
+      }
+    }
+
+    // Call the updateStatus() function on page load
+    updateStatus();
+  </script>
+</body>
+</html>
+
+
+
+<!--
+In this simplified exercise:
+
+We have a single HTML page with a heading and a div element with the ID "status" where we will display the open/closed status.
+
+The JavaScript code includes the isRestaurantOpen() function to check if the restaurant is open based on the current time (hour). The function assumes the restaurant is open from 10 AM to 8 PM. You can customize this logic based on the actual opening hours of the restaurant.
+
+The updateStatus() function gets the current hour, calls isRestaurantOpen() to determine if the restaurant is open or closed, and updates the content of the "status" div accordingly.
+
+The updateStatus() function is called on page load to display the initial status.
+
+When you open the HTML file in a web browser, it will display whether the restaurant is currently open or closed based on the current time.
+-->
